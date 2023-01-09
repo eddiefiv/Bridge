@@ -17,7 +17,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.bridgejava.databinding.ActivityMainBinding;
+import com.example.bridgejava.databinding.MainActivityBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,16 +26,17 @@ import androidx.annotation.NonNull;
 
 public class MainActivity extends AppCompatActivity {
 
-    ActivityMainBinding binding;
+    MainActivityBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = MainActivityBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         replaceFragment(new HomeFragment());
+        binding.bottomNavigationView.setSelectedItemId(R.id.home);
 
-        binding.bottomNavigationView.setOnSelectItemListener(item -> {
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId()) {
                 case R.id.person:
