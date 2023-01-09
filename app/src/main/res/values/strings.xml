@@ -1,4 +1,5 @@
 <resources>
+    <!-- General strings for universal usage -->
     <string name="app_name">BridgeJava</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
@@ -9,4 +10,7 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="bridge_title">Project Vision Bridge</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
